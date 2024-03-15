@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="../js/circleProgress.js"></script>
+</head>
+
+
+<body class="home" onload="start()">
+    <!-- //  INTRO  // -->
+    <div class="content-wrapper">
+        <div class="content-bg">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-steel fixed-top" data-bs-theme="dark"
+                    style="background-color: black;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" style="font-weight: bolder;" href="#">
+                            <!-- This is where the logo goes.-->
+                            <img src="../assets/output-onlinepngtools.png" alt="logo"
+                                style="width: 50px; height: 50px; margin-left: 32px;">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: #f843f8; font-weight: bold;"
+                                        href="dashboard.html">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: #f843f8; font-weight: bold;"
+                                        href="generalinterest.html">Diagnostic
+                                        Test</a>
+                                </li>
+                                <!-- Dropdown menu, standrd templated obtained from boostrap, used css to modify colours. pretty standard-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: #f843f8; font-weight: bold;"
+                                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Skills
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" style="color: #0ef1a4; font-weight: bold;"
+                                                href="#">Problem
+                                                Solving</a></li>
+                                        <li><a class="dropdown-item" style="color: #0ef1a4; font-weight: bold;"
+                                                href="#">Skill 1</a>
+                                        </li>
+                                        <li><a class="dropdown-item" style="color: #0ef1a4; font-weight: bold;"
+                                                href="#">Skill 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- right side buttons where the ms-auto pushes it to the other end.-->
+                            <ul class="navbar-nav ms-auto">
+                                <!-- this checks if the user is logged then we wont to display the username and logout button -->
+                                <!-- wanted to use the nav link, the # doesn't load anywhere but inherits the navlink styling. -->
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: #0ef1a4; font-weight: bold;" href="#">Welcome,
+                                        Gemma</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <section id="progress">
+                    <h2>Current Skill Progress</h2>
+                    <div class="progress-overview">
+                        <div class="progress-overview-bar">
+                            <div id="ee" class="circlePercent" style="top: 0;">
+                                <div class="counter"></div>
+                                <div class="progress"></div>
+                                <div class="progressEnd"></div>
+                            </div>
+                        </div>
+                        <div class="progress-overview-item">
+                            <ul>
+                                <li>
+                                    <div class="progress-bar" id="pg1" style="width: 39%;">39%</div>
+                                    <span>Problem Solving</span>
+                                </li>
+                                <li>
+                                    <div class="progress-bar" style="width: 31%;">31%</div>
+                                    <span>Programming</span>
+                                </li>
+                                <li>
+                                    <div class="progress-bar" style="width: 23%;">23%</div>
+                                    <span>Web Development</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill">
+                            <div class="skill-header">
+                                <h3>Problem Solving</h3>
+                                <p>Problem solving is the act of defining a
+                                    problem; identifying, prioritizing, and selecting alternatives for a solution.</p>
+                            </div>
+                            <div id="skill-1" class="circlePercent">
+                                <div class="counter"></div>
+                                <div class="progress"></div>
+                                <div class="progressEnd"></div>
+                            </div>
+                            <div class="skill-actions">
+                                <a href="skillPage.html">View</a>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <h3>Web Development</h3>
+                                <p>Web development involves building, creating, and maintaining websites. It encompasses
+                                    a wide range of tasks..</p>
+                            </div>
+                            <div id="skill-2" class="circlePercent">
+                                <div class="counter"></div>
+                                <div class="progress"></div>
+                                <div class="progressEnd"></div>
+                            </div>
+                            <div class="skill-actions">
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <h3>Programming</h3>
+                                <p>Programming is the process of creating a set of instructions that tell a computer how
+                                    to perform a task. </p>
+                            </div>
+                            <div id="skill-3" class="circlePercent">
+                                <div class="counter"></div>
+                                <div class="progress"></div>
+                                <div class="progressEnd"></div>
+                            </div>
+                            <div class="skill-actions">
+                                <a href="#">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="opprtunity">
+                    <h2>Opportunity</h2>
+                    <!-- <p>View selected opportunities below. More information can be found at <a
+                            href="https://github.com/cn666278" target="_blank">GitLab</a>.</p> -->
+
+                    <div class="opprtunity-wrapper">
+                        <section class="opprtunity-item">
+                            <a
+                                href="https://www.bbc.com/ownit/take-control/coding-quiz?collection=level-up&utm_source=Website&utm_medium=app+redirect+%26+social+link&utm_campaign=August"><img
+                                    src="../assets/code_quiz.png" srcset="../assets/code_quiz.png 2x"
+                                    alt="Decoded by Christina YouTube video thumbnails"></a>
+                            <h5>Learn to Code Quiz</h5>
+                            <ul>
+                                <li>Test your coding skills!
+
+                                    Do all those lines on the screen look like gibberish to you? Or are they super easy
+                                    to understand?</li>
+                            </ul>
+                            <a class="btn" target="_blank">BBC</a>
+                            <a class="btn" target="_blank">Code test</a>
+                        </section>
+
+                        <section class="opprtunity-item">
+                            <a href="https://www.futurelearn.com/experttracks/solving-problems-technology"><img
+                                    src="../assets/problemsolving.png" srcset="../assets/problemsolving.png 2x"
+                                    alt="tasking app"></a>
+                            <h5>Problem Solving in the Digital Age</h5>
+                            <ul>
+                                <li>Build decision-making skills using design thinking, data, and planning to help you
+                                    solve problems in the workplace and beyond.</li>
+                            </ul>
+                            <a class="btn" target="_blank">Decision making</a>
+                            <a class="btn" target="_blank">Creativity</a>
+                            <a class="btn" target="_blank">Data Collection</a>
+                        </section>
+
+                        <section class="opprtunity-item">
+                            <a href="https://www.udemy.com/course/fun-easy-web-development-for-beginners/"><img
+                                    src="../assets/web_dev.png" srcset="../assets/web_dev.png 2x"
+                                    alt="Decoded by Christina YouTube video thumbnails"></a>
+                            <h5>Fun & Easy Introduction to Web Development</h5>
+                            <ul>
+                                <li>Learn the Basics of HTML, CSS & JavaScript.</li>
+                            </ul>
+                            <a class="btn" target="_blank">HTML</a>
+                            <a class="btn" target="_blank">CSS</a>
+                            <a class="btn" target="_blank">JavaScript</a>
+                            <a class="btn" target="_blank">Ajax</a>
+                        </section>
+
+                        <section class="opprtunity-item">
+                            <a href="https://www.theforage.com/simulations/kpmg-uk/intro-technology-zyu4#lp"><img
+                                    src="../assets/intro2it.png" srcset="../assets/intro2it.png 2x" alt=""></a>
+                            <h5>Introduction to Technology</h5>
+                            <ul>
+                                <li>Work with our different technology teams to deliver KPMG expertise to our clients.
+                                </li>
+                            </ul>
+                            <a class="btn" target="_blank">KPMG</a>
+                            <a class="btn" target="_blank">IT</a>
+                        </section>
+
+
+
+                    </div>
+                </section>
+
+                <section id="achievement">
+                    <h2>Achievement</h2>
+                    <ul>
+                        <li>
+                            <img class="achievement-image" src="../assets/icons8-badge-beginner.png" alt="">
+                            <h3>Beginner Level</h3>
+                            <p>Time Management</p>
+                        </li>
+                        <li>
+                            <img class="achievement-image" src="../assets/icons8-badge-elementary.png" alt="">
+                            <h3>Elementary Level</h3>
+                            <p>Time Management</p>
+                        </li>
+                        <li>
+                            <img class="achievement-image" src="../assets/icons8-badge-master.png" alt="">
+                            <h3>Master Level</h3>
+                            <p>Time Management</p>
+                        </li>
+                        <li>
+                            <img class="achievement-image" src="../assets/icons8-badge-beginner1.png" alt="">
+                            <h3>Beginner Level</h3>
+                            <p>Collaboration</p>
+                        </li>
+                    </ul>
+                </section>
+
+            </main>
+
+            <section id="daily-streak">
+                <h3>Daily Streak</h3>
+                <div class="streak-container">
+                    <div class="streak-calendar">
+                        <div class="day">13<span class="icon">&#127925;</span></div>
+                        <div class="day">14<span class="icon">&#127925;</span></div>
+                        <div class="day">15<span class="icon">&#127925;</span></div>
+                        <div class="day current">16<span class="icon">&#9733;</span></div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                    </div>
+                    <div class="streak-info">
+                        <p class="streak-message">Keep up the good work!</p>
+                        <p>You've been consistent for the past <span class="streak-count">4</span> days.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer>
+        <p>© 2024 by Power Rangers | <a href="powerranger@cardiff.ac.uk">powerranger@cardiff.ac.uk</a></p>
+
+        <ul class="socials">
+            <li>
+                <a href="https://youtube.com" target="_blank"><img src="../assets/icon-logo-youtube.png"
+                        alt="Youtube"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com" target="_blank"><img src="../assets/icon-logo-twitter.png"
+                        alt="Twitter"></a>
+            </li>
+            <li>
+                <a href="https://instagram.com" target="_blank"><img src="../assets/icon-logo-instagram.png"
+                        alt="My Instagram"></a>
+            </li>
+            <li>
+                <a href="https://git.cardiff.ac.uk/c23002705/mifutures-power-rangers" target="_blank"><img
+                        src="../assets/gitlab.png" alt="My Gitlab"></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</html>
